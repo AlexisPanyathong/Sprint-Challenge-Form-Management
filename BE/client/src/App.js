@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import FormikRegistertrationForm from './components/RegistertrationForm';
 import axios from 'axios';
+import FoodCard from './components/FoodCard';
 
 class App extends React.Component {
   constructor(props) {
@@ -30,9 +31,9 @@ class App extends React.Component {
       <div className="App">
         <FormikRegistertrationForm />
 
-        {/* {this.state.data.map(info => (
-
-        ))} */}
+        {this.state.data.map(food => (
+          <FoodCard food={food} />
+        ))}
       </div>
     );
   }
