@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import FormikRegistertrationForm from './components/RegistertrationForm';
+import FormikRegistrationForm from './components/RegistrationForm';
 import axios from 'axios';
 import FoodCard from './components/FoodCard';
 
@@ -28,13 +28,16 @@ class App extends React.Component {
   render() {
 
     return (
-      <div className="App">
-        <FormikRegistertrationForm />
+      
+        <div className="App">
+          <h1>Registration Form</h1>
+          <FormikRegistrationForm />
 
-        {this.state.data.map(food => (
-          <FoodCard food={food} />
-        ))}
-      </div>
+          {this.state.data.map(food => (
+            <FoodCard food={food} />
+          ))}
+        </div>
+      
     );
   }
 }

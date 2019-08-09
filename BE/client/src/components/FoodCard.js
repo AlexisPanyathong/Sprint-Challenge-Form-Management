@@ -1,4 +1,5 @@
 import React from 'react';
+import { Card } from './StyledWidgets';
 
 export default class FoodCard extends React.Component {
     constructor(props) {
@@ -7,21 +8,23 @@ export default class FoodCard extends React.Component {
 
     render() {
         return (
-            <div className="food-card">
-                <div>
-                    
-                    Name: {this.props.food.name}
-                </div>
+            <Card>
+                <div className="food-card">
+                    <div>
+                        
+                        Name: {this.props.food.name}
+                    </div>
 
-                <div>
-                    Course: {this.props.food.course}
-                </div>
+                    <div>
+                        Course: {this.props.food.course}
+                    </div>
 
-                <div>
-                    Technique: {this.props.food.technique}
-                </div>
+                    <div>
+                        Technique: {this.props.food.technique}
+                    </div>
 
-            </div>
+                </div>
+            </Card>
         )
     }
 }
