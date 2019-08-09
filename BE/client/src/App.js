@@ -3,6 +3,7 @@ import './App.css';
 import FormikRegistrationForm from './components/RegistrationForm';
 import axios from 'axios';
 import FoodCard from './components/FoodCard';
+import { Body, Header } from './components/StyledWidgets';
 
 class App extends React.Component {
   constructor(props) {
@@ -28,16 +29,19 @@ class App extends React.Component {
   render() {
 
     return (
-      
+      <Body>
         <div className="App">
-          <h1>Registration Form</h1>
+          <Header>
+            <header>Registration Form</header>
+          </Header>
+
           <FormikRegistrationForm />
 
           {this.state.data.map(food => (
             <FoodCard food={food} />
           ))}
         </div>
-      
+      </Body>
     );
   }
 }

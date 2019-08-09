@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Form, Field, withFormik } from 'formik';
 import * as Yup from 'yup';
+import { RegisterForm, Button } from './StyledWidgets';
 
 const RegistrationForm = ({errors, touched, status}) => {
     const [users, setUsers] = useState([]);
@@ -13,23 +14,34 @@ const RegistrationForm = ({errors, touched, status}) => {
         }
     }, [status]);
 
+    function clickHandler(event) {
+        event.target.style.background= '#0A235C';
+        event.target.style.color= '#F5F5F5';
+        event.target.style.width= '60%';
+        
+
+    }
+
     return (
         <div className="user-form">
             
-            <Form>
-                <Field type="text" name="username" placeholder="username" />
-                {touched.username && errors.username && (
-                    <p className="error">{errors.username}</p>
-                )}
+            <RegisterForm>
+                <Form>
+                    <Field type="text" name="username" placeholder="username" />
+                    {touched.username && errors.username && (
+                        <p className="error">{errors.username}</p>
+                    )}
 
-                <Field type="password" name="password" placeholder="password" />
-                {touched.password && errors.password && (
-                    <p className="error">{errors.password}</p>
-                )}
+                    <Field type="password" name="password" placeholder="password" />
+                    {touched.password && errors.password && (
+                        <p className="error">{errors.password}</p>
+                    )}
 
-                <button type="submit">Submit</button>
-            </Form>
-
+                    
+                    <Button onClick={event => clickHandler(event)} type="submit">Submit</Button>
+                    
+                </Form>
+            </RegisterForm>
             
         </div>
     )
@@ -44,8 +56,8 @@ const FormikRegistrationForm = withFormik({
     },
 
     validationSchema: Yup.object().shape({
-        username: Yup.string().required('Required to have a username'),
-        password: Yup.string().required('Required to have a password')
+        username: Yup.string().required('* Required to have a username'),
+        password: Yup.string().required('* Required to have a password')
     }),
 
     handleSubmit(values, {setStatus}) {
