@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from './StyledWidgets';
+import { Card, NameHeader, Name, CourseHeader, Course, TechniqueHeader, Technique } from './StyledWidgets';
 
 export default class FoodCard extends React.Component {
     constructor(props) {
@@ -10,18 +10,26 @@ export default class FoodCard extends React.Component {
         return (
             <Card>
                 <div className="food-card">
-                    <div>
-                        
-                        Name: {this.props.food.name}
-                    </div>
+                    <NameHeader>
+                        Name: 
+                    </NameHeader>
+                    <Name>
+                        {this.props.food.name}
+                    </Name>
 
-                    <div>
-                        Course: {this.props.food.course}
-                    </div>
+                    <CourseHeader>
+                        Course: 
+                    </CourseHeader>
+                    <Course>
+                        {this.props.food.course}
+                    </Course>
 
-                    <div>
-                        Technique: {this.props.food.technique}
-                    </div>
+                    <TechniqueHeader>
+                        Technique: 
+                    </TechniqueHeader>
+                    <Technique>
+                        {this.props.food.technique}
+                    </Technique>
 
                 </div>
             </Card>
