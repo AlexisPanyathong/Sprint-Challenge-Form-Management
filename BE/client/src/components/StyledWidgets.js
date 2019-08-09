@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 
 //App
-export const Body = styled.body`
-    background-color: lightgrey;
-`;
+// export const Body = styled.body`
+//     background-color: lightgrey;
+// `;
 
-export const Header = styled.header`
-    margin-top: 50px;
+export const Title = styled.header`
     margin-bottom: 40px;
     font-size: 40px;
     font-family: Lato san serif;
+    font-weight: regular;
+   
 `;
 
 //RegisterForm
@@ -21,11 +22,13 @@ export const RegisterForm = styled.div`
 
     Form {
         margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+       
          
         input {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
+            
             margin-bottom: 20px;
             width: 150%;
             height: 20px;
@@ -52,11 +55,12 @@ export const Card = styled.div`
     width: 50%;
     margin: 0 auto;
     margin-top: 20px;
+    margin-bottom: 40px;
     padding-bottom: 40px;
     height: 300px;
     background-color: #0A235C;
     box-shadow: 2px 5px 5px;
-    margin-bottom: 50px;
+   
 `;
 
 export const NameHeader = styled.h1`

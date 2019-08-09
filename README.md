@@ -26,7 +26,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [X] What are the required parts of class components?
 
-    Constructor and super
+    Needs the extend React.Component and render.
 
 - [X] Name at least three lifecycle methods?
 
@@ -35,17 +35,17 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
     - componentDidMount
     - componentDidUpdate
 
-- [ ] Why are forms used so often in web applications and software?
+- [X] Why are forms used so often in web applications and software?
 
     Forms are to help collect/store users data. Software is to help run the web efficiently.
 
-- [ ] What advantages are there by using a forms library like Formik?
+- [X] What advantages are there by using a forms library like Formik?
     It makes the forms much easier to control such as;
     - Nested form data and/or arrays
     - Wiring up state
     - Error messages
 
-- [ ] Why do we write tests for our apps?
+- [X] Why do we write tests for our apps?
 
     - Surfaces bugs faster.
     - Reduces the risk of regressions.

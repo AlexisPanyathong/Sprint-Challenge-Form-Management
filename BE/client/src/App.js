@@ -3,7 +3,7 @@ import './App.css';
 import FormikRegistrationForm from './components/RegistrationForm';
 import axios from 'axios';
 import FoodCard from './components/FoodCard';
-import { Body, Header } from './components/StyledWidgets';
+import { Body, Title } from './components/StyledWidgets';
 
 class App extends React.Component {
   constructor(props) {
@@ -29,11 +29,13 @@ class App extends React.Component {
   render() {
 
     return (
-      <Body>
+      
         <div className="App">
-          <Header>
-            <header>Registration Form</header>
-          </Header>
+          <Title>
+            <div className="title">
+              <header>Registration Form</header>
+            </div>
+          </Title>
 
           <FormikRegistrationForm />
 
@@ -41,7 +43,7 @@ class App extends React.Component {
             <FoodCard food={food} />
           ))}
         </div>
-      </Body>
+      
     );
   }
 }
